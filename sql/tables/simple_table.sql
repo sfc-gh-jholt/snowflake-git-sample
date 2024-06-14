@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS simple_table (
+CREATE TABLE or REPLACE simple_table (
     id INT AUTOINCREMENT,
     value VARCHAR(255),
     name VARCHAR(255),
