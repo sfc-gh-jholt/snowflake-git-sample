@@ -1,10 +1,14 @@
-CREATE OR REPLACE PROCEDURE simple_procedure(value VARCHAR)
+CREATE OR REPLACE PROCEDURE insert_into_simple_table(value STRING)
 RETURNS STRING
 LANGUAGE SQL
 AS
 $$
 BEGIN
-    INSERT INTO simple_table (value, created_at) VALUES (1, CURRENT_TIMESTAMP());
+    -- Insert the provided value and current timestamp into the table
+    INSERT INTO simple_table (VALUE, created_at)
+    VALUES (value, CURRENT_TIMESTAMP);
+
+    -- Return a success message
     RETURN 'Insert successful';
 END;
-$$
+$$;
